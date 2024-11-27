@@ -8,8 +8,6 @@ import {
   YAxis,
 } from "recharts";
 
-type Props = {};
-
 const data = [
   {
     name: "Page A",
@@ -45,7 +43,7 @@ const data = [
   },
 ];
 
-export default function BarChart({}: Props) {
+export default function BarChart() {
   return (
     <ResponsiveContainer width={"100%"} height={450}>
       <BarGraph data={data}>
@@ -63,7 +61,7 @@ export default function BarChart({}: Props) {
           fontSize={12}
           tickFormatter={(value) => `$${value}`}
         />
-        <Bar dataKey={"total"} fill="888888" radius={[4, 4, 0, 0]} />
+        <Bar dataKey={"total"} fill="#888888" radius={[4, 4, 0, 0]} />
       </BarGraph>
     </ResponsiveContainer>
   );
